@@ -124,7 +124,7 @@ class CalendarHeader extends Component {
           {leftArrow}
           <View style={{ flexDirection: 'row' }}>
             <Text allowFontScaling={false} style={this.style.monthText} accessibilityTraits='header'>
-              {this.props.month.toString(this.props.monthFormat)}
+              {XDate.locales[XDate.defaultLocale].monthNames[this.props.month.getMonth()]}{' '}{XDate.defaultLocale == 'th' ? this.props.month.getFullYear() + 543: this.props.month.getFullYear()}            
             </Text>
             {indicator}
           </View>
